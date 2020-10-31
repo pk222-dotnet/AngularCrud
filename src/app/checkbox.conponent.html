@@ -1,0 +1,21 @@
+<ng-container *ngFor="let group of groups">
+	<label class="btn btn-filter" id="bttns">
+    <input type="checkbox" name="customersGroupFilter" autoComplete="off" [value]="group" (change)="changeGroup($event)">
+    {{ group }}
+  </label>&nbsp;
+</ng-container>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Group</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let user of newArray">
+      <td>{{user.name}}</td>
+      <td>{{user.group}}</td>
+    </tr>
+  </tbody>
+</table>
